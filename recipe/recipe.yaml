@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyperclip
-  version: "1.11.0"
+  version: 1.11.0
 
 package:
   name: ${{ name|lower }}
@@ -20,7 +20,7 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - setuptools
   run:
@@ -46,9 +46,6 @@ tests:
       python_version:
         - ${{ python_min }}
         - "*"
-  - requirements:
-      run:
-        - python ${{ python_min }}
 
 about:
   license_file: LICENSE.txt
